@@ -179,3 +179,6 @@ class TIMJUser(proxies.UserProxy):
     
     def __repr__(self):
         return "TIMJUser <%s>" % self.id
+    
+    def __hash__(self):
+        return hash(self.id)
